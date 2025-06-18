@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>متجر التليفونات</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    header {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .phones-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .phone-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .phone-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .phone-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .phone-card h3 {
+      margin: 10px 0;
+    }
+    .phone-card p {
+      color: #2ecc71;
+      font-weight: bold;
+    }
+    .buy-btn {
+      background: #2980b9;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .buy-btn:hover {
+      background: #1f6393;
+    }
+    footer {
+      background: #3498db;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📱 متجر التليفونات</h1>
+    <p>أفضل العروض على التليفونات الجديدة والمستعملة</p>
+  </header>
+
+  <h2 style="text-align:center; margin-top: 30px; color: #34495e;">📦 التليفونات الجديدة</h2>
+  <section class="phones-container">
+    <div class="phone-card">
+      <img src="https://via.placeholder.com/250x200?text=iPhone+13" alt="iPhone 13">
+      <h3>iPhone 13</h3><ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;"><li>شاشة عالية الدقة</li><li>بطارية تدوم طويلاً</li><li>كاميرا بجودة ممتازة</li><li>ضمان سنة</li></ul>
+      <p>15,000 جنيه</p>
+      <button class="buy-btn" onclick="buyNow('iPhone 13')">اطلب الآن</button>
+    </div>
+
+    <div class="phone-card">
+      <img src="https://via.placeholder.com/250x200?text=Samsung+S22" alt="Samsung S22">
+      <h3>Samsung S22</h3><ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;"><li>شاشة عالية الدقة</li><li>بطارية تدوم طويلاً</li><li>كاميرا بجودة ممتازة</li><li>ضمان سنة</li></ul>
+      <p>13,500 جنيه</p>
+      <button class="buy-btn" onclick="buyNow('Samsung S22')">اطلب الآن</button>
+    </div>
+  
+  <div class="phone-card">
+    <img src="https://via.placeholder.com/250x200?text=iPhone+14+Pro" alt="iPhone 14 Pro">
+    <h3>iPhone 14 Pro</h3>
+    <ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;">
+      <li>شاشة Super Retina XDR</li>
+      <li>بطارية قوية</li>
+      <li>كاميرا ثلاثية بدقة عالية</li>
+      <li>ضمان سنة</li>
+    </ul>
+    <p>28,000 جنيه</p>
+    <button class="buy-btn" onclick="buyNow('iPhone 14 Pro')">اطلب الآن</button>
+  </div>
+
+  <div class="phone-card">
+    <img src="https://via.placeholder.com/250x200?text=iPhone+15+Pro+Max" alt="iPhone 15 Pro Max">
+    <h3>iPhone 15 Pro Max</h3>
+    <ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;">
+      <li>أحدث معالج من Apple</li>
+      <li>كاميرا فائقة الزووم</li>
+      <li>ذاكرة داخلية 1 تيرا</li>
+      <li>ضمان سنتين</li>
+    </ul>
+    <p>45,000 جنيه</p>
+    <button class="buy-btn" onclick="buyNow('iPhone 15 Pro Max')">اطلب الآن</button>
+  </div>
+
+  <div class="phone-card">
+    <img src="https://via.placeholder.com/250x200?text=Samsung+S23+Ultra" alt="Samsung S23 Ultra">
+    <h3>Samsung S23 Ultra</h3>
+    <ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;">
+      <li>شاشة Dynamic AMOLED 2X</li>
+      <li>كاميرا 200 ميجا بيكسل</li>
+      <li>بطارية 5000mAh</li>
+      <li>ضمان سنة</li>
+    </ul>
+    <p>38,000 جنيه</p>
+    <button class="buy-btn" onclick="buyNow('Samsung S23 Ultra')">اطلب الآن</button>
+  </div>
+
+  <div class="phone-card">
+    <img src="https://via.placeholder.com/250x200?text=Samsung+A73" alt="Samsung A73">
+    <h3>Samsung A73</h3>
+    <ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;">
+      <li>شاشة 120Hz</li>
+      <li>كاميرا 108MP</li>
+      <li>ذاكرة 256 جيجا</li>
+      <li>ضمان سنة</li>
+    </ul>
+    <p>17,000 جنيه</p>
+    <button class="buy-btn" onclick="buyNow('Samsung A73')">اطلب الآن</button>
+  </div>
+</section>
+
+  <h2 style="text-align:center; margin-top: 30px; color: #34495e;">♻️ التليفونات المستعملة</h2>
+  <section class="phones-container">
+    <div class="phone-card">
+      <img src="https://via.placeholder.com/250x200?text=iPhone+X+Used" alt="iPhone X مستعمل">
+      <h3>iPhone X (مستعمل)</h3><ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;"><li>شاشة عالية الدقة</li><li>بطارية تدوم طويلاً</li><li>كاميرا بجودة ممتازة</li><li>ضمان سنة</li></ul>
+      <p>7,000 جنيه</p>
+      <button class="buy-btn" onclick="buyNow('iPhone X مستعمل')">اطلب الآن</button>
+    </div>
+
+    <div class="phone-card">
+      <img src="https://via.placeholder.com/250x200?text=Huawei+Y9+Used" alt="Huawei Y9 مستعمل">
+      <h3>Huawei Y9 (مستعمل)</h3><ul style="text-align:right; font-size:14px; padding: 0 15px; list-style-type: square;"><li>شاشة عالية الدقة</li><li>بطارية تدوم طويلاً</li><li>كاميرا بجودة ممتازة</li><li>ضمان سنة</li></ul>
+      <p>4,500 جنيه</p>
+      <button class="buy-btn" onclick="buyNow('Huawei Y9 مستعمل')">اطلب الآن</button>
+    </div>
+  </section>
+
+  
+    <section style="text-align:center; padding: 30px;">
+      <h2 style="color: #2c3e50;">📞 تواصل معنا</h2>
+      <p>للتواصل والاستفسار عبر الهاتف أو الواتساب</p>
+      <a href="https://wa.me/201026086599" style="display:inline-block; margin:10px; background:#25d366; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">راسلنا على واتساب</a>
+      <div style="margin-top: 15px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="instagram"></a>
+        <a href="https://wa.me/201026086599" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="whatsapp"></a>
+      </div>
+    </section>
+    <footer>
+
+    <p>© 2025 - جميع الحقوق محفوظة - By D/Youssef Mohamed</p>
+  </footer>
+
+  <script>
+    function buyNow(productName) {
+      const whatsappNumber = "201001234567";
+      const message = `مرحبًا، أنا مهتم بشراء ${productName}`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>
